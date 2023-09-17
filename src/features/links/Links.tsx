@@ -72,10 +72,7 @@ export default function Links() {
             strategy={verticalListSortingStrategy}>
             {UserLinks.map(
               (link: { url: string; origin: string }, i: number) => (
-                <SortableItem
-                  key={link.origin}
-                  id={link}
-                  someoneIsDragging={isDragging}>
+             
                   <div className="Links__linkContainer">
                     <div className="Links__linkContainer__headerblock">
                       <p className="Links__linkContainer__title">
@@ -97,7 +94,7 @@ export default function Links() {
                       setSelectedOption={setSelectedOption}
                     />
                   </div>
-                </SortableItem>
+      
               )
             )}
           </SortableContext>
