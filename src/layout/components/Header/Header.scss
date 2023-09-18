@@ -35,7 +35,8 @@
       gap: 0.6rem;
       white-space: nowrap;
       @media screen and (max-width: 600px) {
-        padding: 0.2rem 0.5rem;
+        gap: 0;
+        padding: 1rem;
         font-size: 12px;
       }
       p {
@@ -77,13 +78,20 @@
     cursor: pointer;
     transition: all 045s ease-in-out;
     text-decoration: none;
-
+    @include flex();
+    svg {
+      width: 18px;
+      height: 18px;
+      path {
+        fill: #633bff;
+      }
+    }
     @media screen and (max-width: 600px) {
-      padding: 0.2rem 0.5rem;
+      padding: 0.5rem 1rem;
       font-size: 12px;
     }
   }
-  &__preview:hover{
+  &__preview:hover {
     color: white;
     background-color: #633bff;
     box-shadow: 0 0 10px #633bff;
